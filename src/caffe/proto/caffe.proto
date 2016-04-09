@@ -306,8 +306,9 @@ message ParamSpec {
 // NOTE
 // Update the next available ID when you add a new LayerParameter field.
 //
+// LayerParameter next available layer-specific ID: 146 (last added: local_param)
     // <<<<<<< HEAD
-// LayerParameter next available layer-specific ID: 145 (last added: crop_param)
+    // LayerParameter next available layer-specific ID: 145 (last added: crop_param)
     // =======
     // LayerParameter next available layer-specific ID: 141 (last added: local_param)
     // >>>>>>> raingo/local
@@ -405,7 +406,7 @@ message LayerParameter {
   optional ThresholdParameter threshold_param = 128;
   optional TileParameter tile_param = 138;
   optional WindowDataParameter window_data_param = 129;
-  optional LocalParameter local_param = 140;
+  optional LocalParameter local_param = 145;
 }
 
 // Message that stores parameters used to apply transformation
