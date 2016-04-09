@@ -270,7 +270,7 @@ endif
 # clang++ instead of g++
 # libstdc++ for NVCC compatibility on OS X >= 10.9 with CUDA < 7.0
 ifeq ($(OSX), 1)
-	CXX := /usr/bin/clang++
+	CXX ?= /usr/bin/clang++
 	ifneq ($(CPU_ONLY), 1)
 		CUDA_VERSION := $(shell $(CUDA_DIR)/bin/nvcc -V | grep -o 'release \d' | grep -o '\d')
 		ifeq ($(shell echo | awk '{exit $(CUDA_VERSION) < 7.0;}'), 1)
@@ -301,7 +301,7 @@ endif
 
 # Custom compiler
 ifdef CUSTOM_CXX
-	CXX := $(CUSTOM_CXX)
+	CXX ?= $(CUSTOM_CXX)
 endif
 
 # Static linking
