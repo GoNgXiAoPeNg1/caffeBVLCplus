@@ -5,10 +5,10 @@
 #include "caffe/layers/unpooling_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-#include "caffe/common.hpp"
-#include "caffe/layer.hpp"
-#include "caffe/syncedmem.hpp"
-#include "caffe/util/math_functions.hpp"
+// #include "caffe/common.hpp"
+// #include "caffe/layer.hpp"
+// #include "caffe/syncedmem.hpp"
+// #include "caffe/util/math_functions.hpp"
 // #include "caffe/vision_layers.hpp"
 
 namespace caffe {
@@ -188,7 +188,7 @@ void UnpoolingLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
             int wstart = pw * stride_w_ - pad_w_;
             int hend = min(hstart + kernel_h_, unpooled_height_ + pad_h_);
             int wend = min(wstart + kernel_w_, unpooled_width_ + pad_w_);
-            int pool_size = (hend - hstart) * (wend - wstart);
+            // int pool_size = (hend - hstart) * (wend - wstart);
             hstart = max(hstart, 0);
             wstart = max(wstart, 0);
             hend = min(hend, unpooled_height_);
