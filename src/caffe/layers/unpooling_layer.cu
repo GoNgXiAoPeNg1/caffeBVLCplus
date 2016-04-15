@@ -2,8 +2,10 @@
 #include <cfloat>
 #include <vector>
 
-#include "caffe/layer.hpp"
-#include "caffe/util/math_functions.hpp"
+#include "caffe/layers/unpooling_layer.hpp"
+// #include "caffe/layers/conv_layer.hpp"
+// #include "caffe/layer.hpp"
+// #include "caffe/util/math_functions.hpp"
 // #include "caffe/vision_layers.hpp"
 
 namespace caffe {
@@ -97,7 +99,7 @@ __global__ void TileUnpoolForward(const int nthreads, const Dtype* bottom_data,
         int wstart = pw * stride_w - pad_w;
         int hend = min(hstart + kernel_h, unpooled_height + pad_h);
         int wend = min(wstart + kernel_w, unpooled_width + pad_w);
-        int pool_size = (hend - hstart) * (wend - wstart);
+        // int pool_size = (hend - hstart) * (wend - wstart);
         distval += bottom_data[ph * width + pw];
       }
     }
