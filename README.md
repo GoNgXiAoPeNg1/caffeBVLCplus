@@ -1,3 +1,11 @@
+# Fork of Caffe 
+**This is a fork used for image reconstruction.**
+  0. Locally Connected Layers: From pull request https://github.com/BVLC/caffe/pull/3068
+  0. Unpool Layers: updated from old version of caffe https://github.com/HyeonwooNoh/caffe (based on original version of Caffe from January 2, 2015), which supports following architectures:
+    0. Deconvolution Network: **Learning Deconvolution Network for Semantic Segmentation** Hyeonwoo Noh, Seunghoon Hong, Bohyung Han [http://arxiv.org/abs/1505.04366]
+    0. Decoupled Network: **Decoupled Deep Neural Network for Semi-supervised Semantic Segmentation** Seunghoon Hong, Hyeonwoo Noh, Bohyung Han [http://arxiv.org/abs/1506.04924]
+
+
 # Caffe
 
 [![Build Status](https://travis-ci.org/BVLC/caffe.svg?branch=master)](https://travis-ci.org/BVLC/caffe)
