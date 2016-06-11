@@ -16,7 +16,9 @@ stepsize: 50000
 # Display every 100 iterations
 display: 100
 # The maximum number of iterations
-max_iter: 150000
+# max_iter: 150000
+max_iter: 100000
+random_seed: 42
 # snapshot intermediate results
 snapshot: 10000
 snapshot_prefix: "examples/mnist_tests/CNN/CNN"
